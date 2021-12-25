@@ -9,7 +9,11 @@
 <body>
     <div>Hi</div>
      
+    <form id="chatInput">
+        <input id="inpBox" type="text" placeholder="type and send"  autocapitalize="on" required autofocus autocomplete="off"/>
 
+        <button type="submit">Send</button>
+    </form>
 
     <!-- connecting frontend socketio library in script -->
     <script src="/socket.io/socket.io.js"></script>

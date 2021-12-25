@@ -32,6 +32,12 @@ socketServer.on('connection', skt=>{
     skt.on('disconnect', ()=>{
         socketServer.emit('msg', "Someone left the room");
     })
+
+    // receive new message 
+     skt.on('newMsg', chat=>{
+        // console.log(chat); 
+        socketServer.emit('msg', chat);
+     })
 })
 
 const port =3000;
