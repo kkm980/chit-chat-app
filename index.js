@@ -2,7 +2,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socket = require('socket.io');
-
+const msgSatchet = require("./client/script/userObj");
 const app = express();
 
 const server = http.createServer(app);
@@ -40,6 +40,6 @@ socketServer.on('connection', skt=>{
      })
 })
 
-const port =3000;
+const port =process.env.PORT||5000;
 
 server.listen(port, ()=>{console.log("listening")});
