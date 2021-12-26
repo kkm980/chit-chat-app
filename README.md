@@ -1,7 +1,7 @@
 # Chat App
 ## App name- chit-chat App
 
-## deployed link- 
+## Presntation link- https://drive.google.com/file/d/1Y3LLwWG2zbcLtxIkWiuYakx3GlwkuzAm/view?usp=sharing
 
 ## Tech stack used- HTML, CSS, JS, Socket.io
 ### libraries used- Express, Nodemon, moment, socket.io
