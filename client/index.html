@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>Hi</div>
-
-     <div id="msgBox" class="msgBox">
-        
-     </div>
-
-    <form id="chatInput">
-        <input id="inpBox" type="text" placeholder="type and send"  autocapitalize="on" required autofocus autocomplete="off"/>
-        <button type="submit">Send</button>
-    </form>
-
-    <!-- connecting frontend socketio library in script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/5.1.0/qs.min.js" integrity="sha512-rjHuJkWaHSdq796S1Ov1tnGgXeQkEFTsrPW0VOjYUHU1b3Ey489/9n3FUSC0vfeaxTWjOVS8VLe1fLZ2kblcBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/socket.io/socket.io.js"></script>
-
-    <script src="script/index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<title>Chit-chat app</title>
+	</head>
+	<body>
+		<div class="join-container">
+			<header class="join-header">
+				<h1><i class="fas fa-smile"></i> ChatCord</h1>
+			</header>
+			<main class="join-main">
+				<form action="chat.html">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Room</label>
+						<select name="room" id="room">
+							<option value="Universal">JavaScript</option>
+						</select>
+					</div>
+					<button type="submit" class="btn">Join Chat</button>
+				</form>
+			</main>
+		</div>
+	</body>
 </html>
