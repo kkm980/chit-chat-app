@@ -74,6 +74,12 @@ function outputMessage(message) {
   para.classList.add('text');
   para.innerText = message.text;
   div.appendChild(para);
+    if(message.username==="you"){
+        div.classList.add("myMsg");
+    }
+    else{
+        div.classList.add("otherMsg");
+    }
   document.querySelector('.chat-messages').appendChild(div);
 }
 

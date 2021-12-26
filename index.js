@@ -47,9 +47,20 @@ io.on('connection', socket => {
 
   // send the new chat message. socket.on sends msg to everyone(democracy)
   socket.on('chatMessage', msg => {
+      
     const user = getCurrentUser(socket.id);
+    // io.to(user.room).emit('message', msgObj(user.username, msg));
 
-    io.to(user.room).emit('message', msgObj(user.username, msg));
+    // send msg to the user as "you sent msg" 
+    socket.emit('message', msgObj("you",msg));
+
+    //  send all other users the msg with the name of user who actually sent the message 
+    socket.broadcast
+      .to(user.room)
+      .emit(
+        'message',
+        msgObj(user.username, msg)
+      );
   });
 
   // whenever a user leaves-->

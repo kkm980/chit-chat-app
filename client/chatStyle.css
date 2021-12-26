@@ -108,6 +108,13 @@ box-shadow: 0px -1px 33px 2px rgba(0,0,0,0.75);
 	border-radius: 20px;
 }
 
+.myMsg{
+    clear: both;
+    float: right;
+}
+.otherMsg{
+    clear: both;
+}
 .chat-messages .message .meta {
 	color: black;
     opacity: 0.8;
