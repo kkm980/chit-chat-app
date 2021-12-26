@@ -1,6 +1,14 @@
 const chatInput = document.getElementById("chatInput");
 const msgBox = document.getElementById("msgBox");
 
+
+// getting room name and user name 
+const {Usrname, room} = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+});
+console.log(Usrname, room);
+
+
 const socket =io();
 
 
@@ -29,9 +37,12 @@ chatInput.addEventListener('submit',(e)=>{
 // appending the incoming message to client side 
 
 function renderMsg(incoming){
-   
+   console.log(incoming);
     const div=document.createElement('div');
     div.innerHTML = `
-    <p>${incoming}</p>`;
+    <span>${incoming.time}</span>
+    <span>${incoming.name}</span>
+    <h5>${incoming.msg}</h5>`
+    
      msgBox.appendChild(div);
 }
