@@ -13,6 +13,7 @@
    - Maintenance of chat state for more than one chat room
    - Show message with the time when it was sent
    - Self sent message appears in right and other users message is at left
+   - At any time find the names of all users currently there in user's chat room
    - Every message appears differently for the user who sends a message and the users who receive that message
    - Notify every user in that room when a user joins with his name, for the joining user show the welcome message instead
    - Take prompt permission from the user after clicking on leave now
